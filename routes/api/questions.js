@@ -40,14 +40,7 @@ const shuffleArray = require('../../utils/shuffle');
  * 
  */
 router.get('/', (req, res) => {
-  Questions.find()
-  .then(items => {
-    res.json(items.map(item => ({
-      question: item.question,
-      options: shuffleArray(item.options),
-      id: item._id
-    })))
-  })
+
 })
 
 /**
@@ -61,13 +54,7 @@ router.get('/', (req, res) => {
  * }
  */
 router.get('/count', (req, res) => {
-  Questions.find()
-    .then(items => {
-      res.status(200).json({
-        count: items.length,
-        ids: items.map(item => item._id)
-      })
-    })
+  
 })
 
 /**
@@ -85,13 +72,7 @@ router.get('/count', (req, res) => {
  * }
  */
 router.get('/:qId', (req, res) => {
-  Questions.findById(req.params.qId).then(item => {
-    res.json({
-      question: item.question,
-      options: shuffleArray(item.options),
-      id: item._id
-    })
-  })
+  
 })
 
 
@@ -117,25 +98,7 @@ router.get('/:qId', (req, res) => {
  * }
  */
 router.post('/result', (req, res) => {
-
-  Questions.find()
-  .then(questions => {
-    const resultJSON = {
-      summary: 'failed',
-      score: 0,
-      total: questions.length
-    }
-    questions.forEach(question => {
-      if(req.body[question._id] === question.answer) {
-        resultJSON.score++
-      }
-    })
-
-    if(resultJSON.score > questions.length / 2) {
-      resultJSON.summary = 'passed'
-    }
-    res.json(resultJSON)
-  })
+  
 })
 
 

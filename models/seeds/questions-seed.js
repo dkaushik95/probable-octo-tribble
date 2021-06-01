@@ -1,6 +1,7 @@
 const seeder = require('mongoose-seed');
 
 const db = require('../../config/keys').mongoURI;
+// Change the data to add your own questions and answers
 const data = require('./questions-data.json');
 
 seeder.connect(db, function() {
