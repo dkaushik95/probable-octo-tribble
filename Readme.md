@@ -2,7 +2,7 @@
 ## The quiz app
 
 ## Description
-In this lab, we will use what we learn't and create a backend for a quiz app. We have a frontend for the quiz app which will load all the quiz information and allow a user to select the answers and send it to receive a score. It doesn't work yet because there are some of the things you have to do.
+In this lab, we will use what we learned and create a backend for a quiz app. We have a frontend for the quiz app, which will load all the quiz information and allow a user to select the answers and send them to receive a score. It doesn't work yet because there are some of the things you have to do.
 
 ## Setup
 
@@ -38,7 +38,7 @@ mongodb://localhost:27017/quizApp
 ```
 
 - Put this URL on `config/keys.js`
-- Open `models/seeds/questions-seed.js`
+- Open `models/seeds/questions-data.js`
 - Edit `data[0].documents` to questions of your choice.
 - The format for the data should be as follows
 ```
@@ -52,14 +52,14 @@ mongodb://localhost:27017/quizApp
 ## Running the application
 - run `npm run dev`
 - This will run the server and the client (frontend in react) concurrently
-- `[0]` logs will be for server
+- `[0]` logs will be for the server
 - `[1]` logs will be for the client
 
 ## Tasks
-- Change `models/Questions` to match the format specified above
-- *note*: Documentation for [mongoose](https://mongoosejs.com/docs/)
-- In the file `routes/api/questions.js`, read the comments and expand the file to include all the routes we need to make the quiz app. 
-- Test the APIs with postman
+- Change `models/Questions.js` to match the format specified above.</br>
+  _**Note**: Documentation for [mongoose](https://mongoosejs.com/docs/)._
+- In the file `routes/api/questions.js`, read the comments and expand the file to include all the routes we need to create the quiz app. 
+- Test the APIs with Postman.
 - Go to `localhost:3000` to see if you can complete the quiz and get the score. 
 - Try changing the seed to see if you can create more questions with multiple options.
 - To run the seed, run `npm run seed`. To do this, we have to make sure that the model is complete and validated.
