@@ -31,7 +31,7 @@ mongoose.connect(db).then(() => {
   console.log('mongodb connected')
 })
 .catch(e => {
-  console.err('error connecting to MongoDB', e)
+  console.error('error connecting to MongoDB', e)
 })
 
 /**

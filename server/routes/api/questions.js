@@ -13,8 +13,8 @@
 const express = require('express');
 const router = express.Router();
 
-// Questions model
-const Questions = require('../../models/Questions');
+// Question Data
+const Questions = require('../../../models/questions-data.json')
 // Hint: get a bonus task here
 const shuffleArray = require('../../utils/shuffle');
 
@@ -40,7 +40,10 @@ const shuffleArray = require('../../utils/shuffle');
  * 
  */
 router.get('/', (req, res) => {
-
+  // Remove the lines below and write your implementation
+  res.status(500).send({
+    error: 'not implemented'
+  })
 })
 
 /**
@@ -54,7 +57,10 @@ router.get('/', (req, res) => {
  * }
  */
 router.get('/count', (req, res) => {
-  
+  // Remove the lines below and write your implementation
+  res.status(500).send({
+    error: 'not implemented'
+  })
 })
 
 /**
@@ -72,7 +78,10 @@ router.get('/count', (req, res) => {
  * }
  */
 router.get('/:qId', (req, res) => {
-  
+  // Remove the lines below and write your implementation
+  res.status(500).send({
+    error: 'not implemented'
+  })
 })
 
 
@@ -98,7 +107,10 @@ router.get('/:qId', (req, res) => {
  * }
  */
 router.post('/result', (req, res) => {
-  
+  // Remove the lines below and write your implementation
+  res.status(500).send({
+    error: 'not implemented'
+  })
 })
 
 

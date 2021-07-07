@@ -6,9 +6,7 @@
  * db: The connection URI that we creates when running the server.
  */
 const express = require('express');
-const mongoose = require('mongoose');
 const questions = require('./routes/api/questions');
-const db = require('./config/keys').mongoURI
 
 /**
  * Initialize a variable app which will be our 
@@ -23,16 +21,6 @@ const app = express();
  */
 app.use(express.json());
 
-/**
- * This is our database connection process.
- * We will use our database connection URL here
- */
-mongoose.connect(db).then(() => {
-  console.log('mongodb connected')
-})
-.catch(e => {
-  console.err('error connecting to MongoDB', e)
-})
 
 /**
  * All requests that matches /api/questions/*
